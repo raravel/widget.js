@@ -28,6 +28,10 @@ export abstract class TagWidget extends Widget {
 		super(options);
 	}
 
+	public build(context: Widget): Widget {
+		return this;
+	}
+
 	public builder(): Node {
 		const element = document.createElement(this.tag);
 		for ( const [key, value] of Object.entries(this.options) ) {
@@ -65,11 +69,11 @@ export class Text extends TagWidget {
 		super({});
 	}
 
-	build() {
+	public build(): TagWidget {
 		return this;
 	}
 
-	builder() {
+	public builder(): Node {
 		return document.createTextNode(this.text);
 	}
 
@@ -80,7 +84,7 @@ export class WidgetApp {
 	constructor(private context: Widget) {
 	}
 
-	public Start(selector: string|Element) {
+	public Start(selector: string|Element): void {
 		if ( typeof selector === 'string' ) {
 			const tmp = document.querySelector(selector);
 			if ( tmp ) {
