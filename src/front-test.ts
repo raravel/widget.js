@@ -1,6 +1,25 @@
-const app = document.querySelector<HTMLDivElement>('#app')!
+import { Text, H1, Div, WidgetApp, Widget } from '../src/index';
 
-app.innerHTML = `
-  <h1>Hello Vite!</h1>
-  <a href="https://vitejs.dev/guide/features.html" target="_blank">Documentation</a>
-`
+class MyWidget extends Widget {
+	build(context: Widget) {
+		return new Div({
+			child: new Text('child')
+		})
+	}
+}
+
+new WidgetApp(
+	new Div({
+		$blur: () => {
+		},
+		children: [
+			new H1({
+				child: new Text('h1')
+			}),
+			new H1({
+				child: new Text('h1')
+			}),
+			new MyWidget({}),
+		],
+	})
+).Start('#app');
