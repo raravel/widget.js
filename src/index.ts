@@ -1,2 +1,1 @@
-export * from './default-elements';
-export * from './element';
+export const A = 'test';
