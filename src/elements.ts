@@ -1,55 +1,55 @@
-import { TagWidget } from './widget';
+import { Widget } from './widget';
 
-export class Div extends TagWidget {
+export class Div extends Widget {
 
-	protected readonly tag = 'div';
-
-}
-
-export class A extends TagWidget {
-
-	protected readonly tag = 'a';
+	tag = 'div';
 
 }
 
-export class H1 extends TagWidget {
+export class A extends Widget {
 
-	protected readonly tag = 'h1';
-
-}
-
-export class H2 extends TagWidget {
-
-	protected readonly tag = 'h2';
+	tag = 'a';
 
 }
 
-export class H3 extends TagWidget {
+export class H1 extends Widget {
 
-	protected readonly tag = 'h3';
-
-}
-
-export class H4 extends TagWidget {
-
-	protected readonly tag = 'h4';
+	tag = 'h1';
 
 }
 
-export class H5 extends TagWidget {
+export class H2 extends Widget {
 
-	protected readonly tag = 'h5';
-
-}
-
-export class H6 extends TagWidget {
-
-	protected readonly tag = 'h6';
+	tag = 'h2';
 
 }
 
-export class Input extends TagWidget {
+export class H3 extends Widget {
 
-	protected readonly tag = 'input';
+	tag = 'h3';
+
+}
+
+export class H4 extends Widget {
+
+	tag = 'h4';
+
+}
+
+export class H5 extends Widget {
+
+	tag = 'h5';
+
+}
+
+export class H6 extends Widget {
+
+	tag = 'h6';
+
+}
+
+export class Input extends Widget {
+
+	tag = 'input';
 
 }
