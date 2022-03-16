@@ -35,7 +35,7 @@ export class State<T extends object> {
         this.observer.push(callback);
     }
 
-    setState(callback: Function): void {
+    setState(callback: (state: T) => void): void {
         callback(this.state);
         this.notify();
     }
